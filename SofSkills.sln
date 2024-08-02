@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroserviceUser.UsesCases"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroserviceUser.API", "MicroserviceUser.API", "{59CDFDA1-E18E-4B3F-BDB0-32AC08D47E72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User.Api", "User.Api\User.Api.csproj", "{FC3383A6-02D3-4C55-B421-7472ADCC7E35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api", "User.Api\Users.Api.csproj", "{FC3383A6-02D3-4C55-B421-7472ADCC7E35}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{3E48A157-FC1D-47EF-B1DC-6A1741ED8801}"
 	ProjectSection(SolutionItems) = preProject

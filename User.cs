@@ -1,4 +1,6 @@
-﻿using System;
+﻿using system;
+
+namespace MicroserviceUser.Domain.Entities;
 
 public class User
 {
