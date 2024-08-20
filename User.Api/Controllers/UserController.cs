@@ -11,17 +11,8 @@ namespace Users.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        //private readonly iuserusecase _userusecase;
-        //private readonly imapper _mapper;
+       
 
-
-        [HttpGet]
-        public async Task<List<User>> GetUsersAsync()
-        {
-            //var users = await _userusecase.getusersasync();
-            //return _mapper.map<List<User>>(users);
-            return null;
-        }
 
 
 
