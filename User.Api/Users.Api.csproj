@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="AutoMapper.Data" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.7">
       <PrivateAssets>all</PrivateAssets>
@@ -16,9 +19,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AutoMapper\" />
     <Folder Include="Middlewares\" />
     <Folder Include="Wrappers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicroserviceUser.Domain\MicroserviceUser.Domain.csproj" />
+    <ProjectReference Include="..\MicroserviceUser.Infraestructure\MicroserviceUser.Infraestructure.csproj" />
+    <ProjectReference Include="..\MicroserviceUser.UsesCases\MicroserviceUser.UsesCases.csproj" />
   </ItemGroup>
 
 </Project>

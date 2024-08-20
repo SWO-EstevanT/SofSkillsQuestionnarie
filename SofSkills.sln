@@ -26,12 +26,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroserviceUser.API", "MicroserviceUser.API", "{59CDFDA1-E18E-4B3F-BDB0-32AC08D47E72}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api", "User.Api\Users.Api.csproj", "{FC3383A6-02D3-4C55-B421-7472ADCC7E35}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5665E253-4048-4B67-AE51-F22B2B7E9B16} = {5665E253-4048-4B67-AE51-F22B2B7E9B16}
+		{C7848815-374A-45FD-BCF0-8860144245A8} = {C7848815-374A-45FD-BCF0-8860144245A8}
+		{D5BBE866-301A-4DC1-8FBD-F156ED060A7E} = {D5BBE866-301A-4DC1-8FBD-F156ED060A7E}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceUser.Domain", "MicroserviceUser.Domain\MicroserviceUser.Domain.csproj", "{C7848815-374A-45FD-BCF0-8860144245A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceUser.Domain", "MicroserviceUser.Domain\MicroserviceUser.Domain.csproj", "{C7848815-374A-45FD-BCF0-8860144245A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceUser.Infraestructure", "MicroserviceUser.Infraestructure\MicroserviceUser.Infraestructure.csproj", "{D5BBE866-301A-4DC1-8FBD-F156ED060A7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceUser.Infraestructure", "MicroserviceUser.Infraestructure\MicroserviceUser.Infraestructure.csproj", "{D5BBE866-301A-4DC1-8FBD-F156ED060A7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceUser.UsesCases", "MicroserviceUser.UsesCases\MicroserviceUser.UsesCases.csproj", "{5665E253-4048-4B67-AE51-F22B2B7E9B16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroserviceUser.UsesCases", "MicroserviceUser.UsesCases\MicroserviceUser.UsesCases.csproj", "{5665E253-4048-4B67-AE51-F22B2B7E9B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
