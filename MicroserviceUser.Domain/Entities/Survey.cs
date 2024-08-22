@@ -13,7 +13,7 @@ namespace MicroserviceUser.Domain.Entities
         public DateTime? dateCreation { get; set; }
         
         //public string enginnerId { get; set; }
-        public int state { get; set; }
+        public string state { get; set; }
 
 
 

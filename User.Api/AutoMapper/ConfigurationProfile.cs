@@ -11,6 +11,10 @@ namespace Users.Api.AutoMapper
         {
             CreateMap<UserMongo, User>().ReverseMap();
             CreateMap<CreateUser, UserMongo>().ReverseMap();
+            CreateMap<SurveyMongo, Survey>().ReverseMap();
+            CreateMap<CreateSurvey, SurveyMongo>().ReverseMap();
+
+
         }
 
     }

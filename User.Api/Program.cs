@@ -27,6 +27,10 @@ builder.Services.AddSingleton<IContext>(provider => new Context(builder.Configur
 builder.Services.AddScoped<IUserUseCase, UserUseCase>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+builder.Services.AddScoped<ISurveyUseCase, SurveyUseCase>();
+builder.Services.AddScoped<ISurveyRepository, SurveyRepository>();
+
+
 
 
 

@@ -11,7 +11,7 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.Interfaces
     public interface IContext
     {
         public IMongoCollection<UserMongo> Users { get; }
-
+        public IMongoCollection<SurveyMongo> Surveys { get; }
 
     }
 }
