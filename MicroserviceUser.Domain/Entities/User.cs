@@ -8,7 +8,7 @@ namespace MicroserviceUser.Domain.Entities
 {
     public class User
     {
-        public string Id { get; set; }
+       // public string Id { get; set; }
         public string uidUser { get; set; }
         public string name { get; set; }
         public string email { get; set; }

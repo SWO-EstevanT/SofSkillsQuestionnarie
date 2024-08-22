@@ -13,7 +13,7 @@ namespace Users.Api.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController
     {
         private readonly IUserUseCase _userUseCase;
         private readonly IMapper _mapper;
