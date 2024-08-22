@@ -1,4 +1,17 @@
+using MicroserviceUser.Infraestructure.MongoAdapter.Interfaces;
+using MicroserviceUser.Infraestructure.MongoAdapter.Repositories;
+using MicroserviceUser.Infraestructure.MongoAdapter;
+using MicroserviceUser.UsesCases.Gateway.Repositories;
+using MicroserviceUser.UsesCases.Gateway;
+using MicroserviceUser.UsesCases.UseCases;
+using AutoMapper.Data;
+using Users.Api.AutoMapper;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+//var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 
@@ -6,6 +19,17 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(config => config.AddDataReaderMapping(), typeof(ConfigurationProfile));
+
+
+builder.Services.AddSingleton<IContext>(provider => new Context(builder.Configuration.GetConnectionString("urlConnectionMongo"), "SofSkills"));
+
+builder.Services.AddScoped<IUserUseCase, UserUseCase>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+
+
+
 
 var app = builder.Build();
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MicroserviceUser.Infraestructure.MongoAdapter.Interfaces
 {
-    public class IContext
+    public interface IContext
     {
         public IMongoCollection<UserMongo> Users { get; }
 

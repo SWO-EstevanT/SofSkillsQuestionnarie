@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MicroserviceUser.Domain.Commands;
+using MicroserviceUser.Domain.Entities;
 using MicroserviceUser.Infraestructure.MongoAdapter.Interfaces;
 using MicroserviceUser.Infraestructure.MongoAdapter.MongoEntities;
 using MicroserviceUser.UsesCases.Gateway.Repositories;
@@ -27,6 +28,16 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.Repositories
         {
             await _collection.InsertOneAsync(_mapper.Map<UserMongo>(user));
             return JsonSerializer.Serialize("User Created");
+        }
+        public async Task<List<User>> GetUsers()
+        {
+            var users = await _collection.FindAsync(Builders<UserMongo>.Filter.Empty);
+            var userList = users.ToEnumerable().Select(x => _mapper.Map<User>(x)).ToList();
+            if (userList.Count == 0)
+            {
+                throw new Exception("No users found.");
+            }
+            return userList;
         }
 
     }

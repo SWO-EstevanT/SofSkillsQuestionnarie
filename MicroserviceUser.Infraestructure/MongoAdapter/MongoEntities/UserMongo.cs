@@ -11,7 +11,6 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.MongoEntities
     {
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
-       // public string Id { get; set; }
         public string uidUser { get; set; }
         public string email { get; set; }
         public string password { get; set; }
