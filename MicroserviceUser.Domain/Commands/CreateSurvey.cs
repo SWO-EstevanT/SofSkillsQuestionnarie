@@ -11,12 +11,10 @@ namespace MicroserviceUser.Domain.Commands
     public class CreateSurvey
     {
 
-        public string tittle { get; set; }
+        public string tittleSurvey { get; set; }
         public DateTime? dateCreation { get; set; }
-
         //public string enginnerId { get; set; }
         public string state { get; set; }
-
         public Collection<SurveyDetail> surveyDetail { get; set; }
 
 
