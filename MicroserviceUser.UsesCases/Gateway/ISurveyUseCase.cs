@@ -13,5 +13,6 @@ namespace MicroserviceUser.UsesCases.Gateway
 
         Task<string> CreateSurvey(CreateSurvey survey);
         Task<List<Survey>> GetSurveys();
+        //Task<string> DeleteSurvey(int uidSurvey);
     }
 }

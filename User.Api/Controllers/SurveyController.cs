@@ -37,6 +37,14 @@ namespace Users.Api.Controllers
         }
 
 
+        //[HttpDelete("deleteSurvey")]
+        //public async Task<string> DeleteSurvey(int uidSurvey) {
+
+        //    return await _surveyUseCase.DeleteSurvey(uidSurvey);
+        
+        //}
+
+
 
     }
 }

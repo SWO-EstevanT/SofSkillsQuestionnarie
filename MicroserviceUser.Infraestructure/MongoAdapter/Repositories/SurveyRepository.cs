@@ -3,6 +3,7 @@ using MicroserviceUser.Domain.Commands;
 using MicroserviceUser.Domain.Entities;
 using MicroserviceUser.Infraestructure.MongoAdapter.Interfaces;
 using MicroserviceUser.Infraestructure.MongoAdapter.MongoEntities;
+using MicroserviceUser.UsesCases.Gateway.Repositories;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
