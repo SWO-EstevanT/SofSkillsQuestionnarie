@@ -12,7 +12,6 @@ namespace MicroserviceUser.Domain.Entities
         
         //public string Id { get; set; } = Guid.NewGuid().ToString();
         public string titleQuestion { get; set; } 
-        public string type { get; set; }  
         public List<string> Options { get; set; } 
 
 

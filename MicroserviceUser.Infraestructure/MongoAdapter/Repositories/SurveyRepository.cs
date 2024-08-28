@@ -41,5 +41,12 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.Repositories
             return surveyList;
         }
 
+
+        public async Task<string> deleteSurvey(int uidSurvey) {
+
+            await _collection.FindAsync<>
+            return JsonSerializer.Serialize("Survey Deleted");
+        }
+
     }
 }

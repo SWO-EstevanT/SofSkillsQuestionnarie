@@ -25,7 +25,7 @@ namespace Users.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<string> CreateUser(CreateUser user)
+        public async Task<string> CreateUser([FromBody]CreateUser user)
         {
             return await _userUseCase.CreateUser(user);
         }
