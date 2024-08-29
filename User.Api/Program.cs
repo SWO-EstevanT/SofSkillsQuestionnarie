@@ -48,16 +48,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
+    context.Response.Headers.Add("Cross-Origin-Embedder-Policy", "require-corp");
+    await next();
+});
 app.UseHttpsRedirection();
 app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthorization();
 
-app.Use(async (context, next) =>
-{
-    context.Response.Headers.Add("Cross-Origin-Opener-Policy", "same-origin");
-    context.Response.Headers.Add("Cross-Origin-Embedder-Policy", "require-corp");
-    await next();
-});
 
 
 app.MapControllers();
