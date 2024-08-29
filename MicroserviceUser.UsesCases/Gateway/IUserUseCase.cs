@@ -12,6 +12,7 @@ namespace MicroserviceUser.UsesCases.Gateway
     {
         Task<string> CreateUser(CreateUser user);
         Task<List<User>> GetUsers();
+        Task<User> GetUserById(string id);
 
 
 

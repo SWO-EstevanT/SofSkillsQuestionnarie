@@ -38,7 +38,20 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.Repositories
                 throw new Exception("No users found.");
             }
             return userList;
+
         }
+
+        public async Task<User> GetUserById(string id) { 
+        
+            var user = await _collection.Find(c=> c.id_fire == id).FirstOrDefaultAsync()
+            ?? throw new Exception($"There isn't a user with this ID: {id}.");
+            var userComplete = _mapper.Map<User>(user);
+            return userComplete;
+        
+
+
+        }
+
 
     }
 }

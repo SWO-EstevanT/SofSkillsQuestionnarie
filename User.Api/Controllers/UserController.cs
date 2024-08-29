@@ -36,6 +36,13 @@ namespace Users.Api.Controllers
             return await _userUseCase.GetUsers();
         }
 
+        [HttpGet("user/{id}")]
+        public async Task<User> GetUserById(string id)
+        {
+            return await _userUseCase.GetUserById(id);
+        }
+
+
 
 
     }

@@ -26,6 +26,9 @@ namespace MicroserviceUser.UsesCases.UseCases
         {
             return await _userRepository.GetUsers();
         }
+        public async Task<User> GetUserById(string id) { 
+            return await (_userRepository.GetUserById(id));
+        }
 
     }
 }
