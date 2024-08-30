@@ -49,7 +49,7 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.Repositories
             return surveyComplete;
         }
 
-        public async Task<string> UpdateSurvey(string id, Survey survey) { 
+        public async Task<string> UpdateSurvey(string id, SurveyUpdate upsur) { 
 
             var surveyFind = GetSurveyById(id);
             // Crear el filtro para encontrar la encuesta por su ID
@@ -57,7 +57,7 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.Repositories
 
             // Definir la actualización de los campos
             var update = Builders<SurveyMongo>.Update
-                .Set(s => s.answer, survey.answer);
+                .Set(s => s.answer, upsur.answer);
 
             // Ejecutar la actualización
             var updateResult = await _collection.UpdateOneAsync(filter, update);

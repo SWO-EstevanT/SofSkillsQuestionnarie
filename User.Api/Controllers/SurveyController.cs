@@ -43,9 +43,9 @@ namespace Users.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<string> UpdateSurvey(string id, [FromBody] Survey survey)
+        public async Task<string> UpdateSurvey(string id, [FromBody] SurveyUpdate upsur)
         {
-            return await _surveyUseCase.UpdateSurvey(id, survey);
+            return await _surveyUseCase.UpdateSurvey(id, upsur);
         }
 
 
