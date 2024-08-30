@@ -36,8 +36,20 @@ namespace Users.Api.Controllers
             return await _surveyUseCase.GetSurveys();
         }
 
+        [HttpGet("survey/{id}")]
+        public async Task<Survey> GetSurveyById(string id)
+        {
+            return await _surveyUseCase.GetSurveyById(id);
+        }
 
-        
+        [HttpPut("{id}")]
+        public async Task<string> UpdateSurvey(string id, [FromBody] Survey survey)
+        {
+            return await _surveyUseCase.UpdateSurvey(id, survey);
+        }
+
+
+
 
 
     }

@@ -40,13 +40,37 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.Repositories
             }
             return surveyList;
         }
+        public async Task<Survey> GetSurveyById(string id)
+        {
 
+            var survey = await _collection.Find(c => c.id_fire == id).FirstOrDefaultAsync()
+            ?? throw new Exception($"There isn't a survey with this ID: {id}.");
+            var surveyComplete = _mapper.Map<Survey>(survey);
+            return surveyComplete;
+        }
 
-        //public async Task<string> deleteSurvey(int uidSurvey) {
+        public async Task<string> UpdateSurvey(string id, Survey survey) { 
 
-        //    await _collection.FindAsync<>
-        //    return JsonSerializer.Serialize("Survey Deleted");
-        //}
+            var surveyFind = GetSurveyById(id);
+            // Crear el filtro para encontrar la encuesta por su ID
+            var filter = Builders<SurveyMongo>.Filter.Eq(s => s.id_fire, id);
+
+            // Definir la actualización de los campos
+            var update = Builders<SurveyMongo>.Update
+                .Set(s => s.answer, survey.answer);
+
+            // Ejecutar la actualización
+            var updateResult = await _collection.UpdateOneAsync(filter, update);
+
+            if (updateResult.ModifiedCount > 0)
+            {
+                return "Survey updated successfully.";
+            }
+            else
+            {
+                return "No changes were made to the survey.";
+            }
+        }
 
     }
 }

@@ -22,12 +22,19 @@ namespace MicroserviceUser.UsesCases.UseCases
             return await _surveyRepository.CreateSurvey(survey);
         }
 
+        public async Task<Survey> GetSurveyById(string id)
+        {
+            return await _surveyRepository.GetSurveyById(id);
+        }
+
         public async Task<List<Survey>> GetSurveys()
         {
             return await _surveyRepository.GetSurveys();
         }
 
-
-
+        public async Task<string> UpdateSurvey(string id, Survey survey)
+        {
+           return await _surveyRepository.UpdateSurvey(id, survey);
+        }
     }
 }
