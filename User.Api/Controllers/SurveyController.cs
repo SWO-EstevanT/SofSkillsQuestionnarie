@@ -10,7 +10,7 @@ namespace Users.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SurveyController 
+    public class SurveyController
     {
 
 
@@ -25,7 +25,7 @@ namespace Users.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<string> CreateSurvey(CreateSurvey survey)
+        public async Task<string> CreateSurvey([FromBody] CreateSurvey survey)
         {
             return await _surveyUseCase.CreateSurvey(survey);
         }
@@ -37,13 +37,7 @@ namespace Users.Api.Controllers
         }
 
 
-        //[HttpDelete("deleteSurvey")]
-        //public async Task<string> DeleteSurvey(int uidSurvey) {
-
-        //    return await _surveyUseCase.DeleteSurvey(uidSurvey);
         
-        //}
-
 
 
     }

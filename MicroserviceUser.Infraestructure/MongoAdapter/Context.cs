@@ -23,6 +23,5 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter
 
         public IMongoCollection<SurveyMongo> Surveys => _database.GetCollection<SurveyMongo>("Surveys");
 
-
     }
 }
