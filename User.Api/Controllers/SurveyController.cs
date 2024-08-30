@@ -37,13 +37,13 @@ namespace Users.Api.Controllers
         }
 
         [HttpGet("survey/{id}")]
-        public async Task<Survey> GetSurveyById(string id)
+        public async Task<Survey> GetSurveyById(Guid id)
         {
             return await _surveyUseCase.GetSurveyById(id);
         }
 
         [HttpPut("{id}")]
-        public async Task<string> UpdateSurvey(string id, [FromBody] SurveyUpdate upsur)
+        public async Task<string> UpdateSurvey(Guid id, [FromBody] SurveyUpdate upsur)
         {
             return await _surveyUseCase.UpdateSurvey(id, upsur);
         }

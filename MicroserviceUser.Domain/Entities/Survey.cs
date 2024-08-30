@@ -10,7 +10,8 @@ namespace MicroserviceUser.Domain.Entities
     public class Survey
     {
 
-        public string id_fire { get; set; }
+
+        public Guid id_fire = Guid.NewGuid();
         public string tittleSurvey { get; set; }
         public DateTime? dateCreation {  get; set; }
         public string answer = "No contestada";

@@ -40,7 +40,7 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.Repositories
             }
             return surveyList;
         }
-        public async Task<Survey> GetSurveyById(string id)
+        public async Task<Survey> GetSurveyById(Guid id)
         {
 
             var survey = await _collection.Find(c => c.id_fire == id).FirstOrDefaultAsync()
@@ -49,7 +49,7 @@ namespace MicroserviceUser.Infraestructure.MongoAdapter.Repositories
             return surveyComplete;
         }
 
-        public async Task<string> UpdateSurvey(string id, SurveyUpdate upsur) { 
+        public async Task<string> UpdateSurvey(Guid id, SurveyUpdate upsur) { 
 
             var surveyFind = GetSurveyById(id);
             // Crear el filtro para encontrar la encuesta por su ID

@@ -22,7 +22,7 @@ namespace MicroserviceUser.UsesCases.UseCases
             return await _surveyRepository.CreateSurvey(survey);
         }
 
-        public async Task<Survey> GetSurveyById(string id)
+        public async Task<Survey> GetSurveyById(Guid id)
         {
             return await _surveyRepository.GetSurveyById(id);
         }

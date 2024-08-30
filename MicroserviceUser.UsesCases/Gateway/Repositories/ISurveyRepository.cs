@@ -12,8 +12,8 @@ namespace MicroserviceUser.UsesCases.Gateway.Repositories
     {
         Task<string> CreateSurvey(CreateSurvey survey);
         Task<List<Survey>> GetSurveys();
-        Task<Survey> GetSurveyById(string id);
-        Task<string> UpdateSurvey(string id, SurveyUpdate upsur);
+        Task<Survey> GetSurveyById(Guid id);
+        Task<string> UpdateSurvey(Guid id, SurveyUpdate upsur);
 
     }
 }

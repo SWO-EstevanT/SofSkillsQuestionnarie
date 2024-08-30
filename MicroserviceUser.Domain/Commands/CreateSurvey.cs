@@ -11,7 +11,6 @@ namespace MicroserviceUser.Domain.Commands
     public class CreateSurvey
     {
 
-        public string? id_fire { get; set; }
         public string? tittleSurvey { get; set; }
         public DateTime? dateCreation { get; set; }
 
