@@ -32,7 +32,7 @@ namespace MicroserviceUser.UsesCases.UseCases
             return await _surveyRepository.GetSurveys();
         }
 
-        public async Task<string> UpdateSurvey(string id, SurveyUpdate upsur)
+        public async Task<string> UpdateSurvey(Guid id, SurveyUpdate upsur)
         {
            return await _surveyRepository.UpdateSurvey(id, upsur);
         }
